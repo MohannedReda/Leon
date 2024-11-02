@@ -1,0 +1,524 @@
+/* Start Variables */
+:root {
+    --mainColor: #10cab7;
+    --secondolor: #2c4755;
+    --paddingTop: 60px;
+    --paddingBottom: 60px;
+}
+/* End Variables*/
+
+/* Start Global Rule */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+/* End Global Rule */
+
+/* Start Section Head */
+.sectionhead {
+    text-align: center;
+    padding: 20px;
+}
+
+.sectionhead h2 {
+    font-weight: 800;
+    font-size: 100px;
+    color: #ebeced;
+    letter-spacing: -5px;
+}
+
+.sectionhead p {
+    margin-top: -30px;
+    font-size: 20px;
+    color: #797979;
+}
+
+@media(max-width:767px) {
+    .sectionhead h2 {
+        font-weight: 800;
+        font-size: 70px;
+        color: #ebeced;
+        letter-spacing: -5px;
+    }
+
+    .sectionhead p {
+        margin-top: -25px;
+          }
+}
+/* End Section Head */
+
+/* Start Container */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Container */
+
+/* Start Header */
+header {
+    padding: 20px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo {
+    width: 60px;
+}
+
+header .link {
+    position: relative;
+}
+
+header .link .icon {
+    width: 30px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-end;
+    align-content: space-between;
+}
+
+header .icon span {
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 5px;
+}
+
+header .icon span:nth-of-type(2) {
+    width: 20px;
+    margin-left: auto;
+    transition: 0.3s;
+}
+
+header .link:hover .icon span:nth-of-type(2) {
+    width: 100%;
+}
+
+header ul {
+    position: absolute;
+    right: 0px;
+    top: calc(100% + 20px);
+    display: none;
+}
+
+header ul::before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    right: 7px;
+    background-color: transparent;
+    border: solid green 10px;
+    border-color: transparent;
+    border-bottom-color: #eee;
+}
+
+header .link:hover ul {
+    display: block;
+    width: 200px;
+}
+
+header ul li {
+    display: block;
+    padding: 15px;
+    background-color: #eee;
+}
+
+header ul li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #333;
+    text-transform: capitalize;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    padding-left: 25px;
+}
+/* End Header */
+
+/* Start Landing */
+.landing {
+    background-image: url("../image/landing.jpg");
+    background-size: cover;
+    height: calc(100vh - 64px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing .text {
+    width: 320px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.landing .text h1 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--mainColor, green);
+    margin-bottom: 18px;
+}
+
+.landing .text p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+/* End Landing */
+
+
+/* Start Features */
+.features {
+    padding-top: var(--paddingTop);
+    padding-bottom: var(--paddingBottom);
+    background-color: #f6f6f6
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 20px;
+}
+
+.features .container .box {
+    text-align: center;
+    padding: 20px;
+}
+
+.features .container .box i {
+    color: var(--mainColor);
+}
+
+.features .container .box h3 {
+    font-weight: 800;
+    margin: 30px 0;
+}
+
+.features .container .box p {
+    line-height: 1.6;
+    color: #777;
+    font-size: 17px;
+}
+/* End Features */
+
+/*Start Services  */
+.services {
+    padding-top: var(--paddingTop);
+    padding-bottom: var(--paddingBottom);
+    background-color: #fff;
+}
+
+.services .container .services-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    column-gap: 30px;
+    margin-top: 100px;
+}
+
+.services .container .services-column .colunm {
+    display: flex;
+    flex-direction: column;
+}
+
+.services .container .services-column .box {
+    display: flex;
+    margin-bottom: 40px;
+    flex: 1;
+}
+
+@media (max-width:767px) {
+    .services .container .services-column .box {
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .container .box i {
+    color: var(--mainColor);
+    flex-basis: 60px;
+    margin-right: 20px;
+}
+
+.services .container .box .text {
+    flex-grow: 1;
+}
+
+.services .container .box .text p {
+    margin: 20px 0;
+    color: #444;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+@media (max-width:767px) {
+    .services .container .box {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .services .container .box i {
+        margin: auto;
+    }
+}
+
+.services .container .column .image {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.services .container .column .image img {
+    width: 260px;
+}
+
+.services .container .column .after {
+    position: absolute;
+    background-color: var(--secondolor);
+    height: calc(100% + 100px);
+    width: 100px;
+    top: -50px;
+    right: 0;
+    z-index: -1;
+}
+
+@media (max-width:1199px) {
+    .services .img {
+        display: none;
+    }
+}
+/*End Services  */
+
+/* Start Portfolio */
+.portfolio {
+    padding-top: var(--paddingTop);
+    padding-bottom: var(--paddingBottom);
+    background-color: #f6f6f6;
+}
+
+.portfolio .container .column {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.portfolio .container .column .box {
+    background-color: #fff;
+}
+
+.portfolio .box img {
+    max-width: 100%;
+}
+
+.portfolio .container .column .text {
+    padding: 20px;
+}
+
+@media (max-width:767px) {
+    .portfolio .container .column .text {
+        text-align: center;
+    }
+}
+
+.portfolio .container .text h3 {
+    margin-bottom: 16px;
+}
+
+.portfolio .container .text p {
+    color: #797979;
+    line-height: 1.6;
+}
+/* End Portfolio */
+
+/* Start About */
+.about {
+    padding-top: var(--paddingTop);
+    padding-bottom: calc(var(--paddingBottom) + 60px);
+}
+
+.about .container .column {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .container .column .text {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(100% - 500px);
+}
+.about .container .column .image {
+    width: 250px;
+    height: 375px;
+    position: relative;
+}
+
+.about .container .column img {
+    max-width: 100%;
+}
+
+
+.about .container .column .image .one {
+    position: absolute;
+    background-color: #ebeced;
+    height: calc(100% + 80px);
+    width: 100px;
+    top: -40px;
+    left: -25px;
+    z-index: -1
+}
+
+.about .container .column .image .two {
+    position: absolute;
+    background-color: transparent;
+    height: 100%;
+    width: 200px;
+    top: -40px;
+    right: -150px;
+    border-left: 80px solid var(--mainColor);
+    border-bottom: 80px solid var(--mainColor);
+    z-index: -1;
+}
+
+.about .container .column .text .frist {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+
+
+.about .container .column .text hr {
+    background-color: var(--mainColor);
+    margin: 20px 0;
+    height: 1px;
+    width: 50%;
+}
+
+.about .container .column .text .second {
+    line-height: 2;
+    color: #777;
+}
+
+
+
+@media(max-width:991px) {
+    .about .container .column {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    .about .container .column .image .two,
+    .about .container .column .image .one {
+        display: none;
+    }
+}
+/* End About */
+
+/*  Start Contact */
+.contact {
+    padding-top: var(--paddingTop);
+    padding-bottom: var(--paddingBottom);
+    background-color: #f6f6f6;
+}
+
+.contact .inf {
+    text-align: center;
+    padding-top: var(--paddingTop);
+    padding-bottom: var(--paddingBottom);
+}
+
+.contact .inf p {
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--secondolor);
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.contact .inf a {
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--mainColor);
+    text-decoration: none;
+}
+
+.contact .inf .social {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.contact .inf .social i {
+    margin-left: 7px;
+    color: var(--secondolor);
+}
+
+@media(max-width:767px) {
+
+    .contact .inf a,
+    .contact .inf p {
+        font-size: 25px;
+    }
+}
+
+/*  End Contact */
+
+/* Start Footer */
+.footer {
+    background-color: var(--secondolor);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer span {
+    margin: 6px;
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
+/* End Footer */
